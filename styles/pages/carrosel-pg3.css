@@ -1,4 +1,5 @@
 @import url(../config.css);
+
 .carousel-container {
   position: relative;
   max-width: 740px;  /* limite máximo */
@@ -6,7 +7,8 @@
   margin: auto;
   overflow: hidden;
   border-radius: 15px;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  border: 2px solid #282c34;
 }
 
 .carousel {
@@ -31,10 +33,10 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.4);
   color: white;
   border: none;
-  padding: 10px;
+  padding: 15px;
   cursor: pointer;
   border-radius: 50%;
   z-index: 10;
@@ -60,6 +62,7 @@
   border-radius: 50%;
   background: rgba(255,255,255,0.5);
   cursor: pointer;
+  border: 2px solid white;
 }
 
 .indicators button.active {
