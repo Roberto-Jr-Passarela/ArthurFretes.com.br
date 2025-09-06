@@ -10,37 +10,64 @@ window.addEventListener('load', () => {
     });
 });
 
-let cont = 1;
-let timer; // variável do intervalo
+const slides = document.querySelectorAll(".slide");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+const indicatorsContainer = document.querySelector(".indicators");
+let currentIndex = 0;
+let autoPlay;
 
-document.getElementById("radio1").checked = true; 
-
-// função que inicia o timer
-function startTimer() {
-    timer = setInterval(function() {
-        nextImg();
-    }, 5000);
-}
-
-function nextImg() {
-    cont++;
-    if (cont > 6) {
-        cont = 1;
-    }
-    document.getElementById("radio" + cont).checked = true;
-}
-
-// --- Novo trecho: sincroniza e reseta o timer ---
-const radios = document.querySelectorAll('input[name="radio-btn"]');
-
-radios.forEach((radio, index) => {
-    radio.addEventListener("click", () => {
-        cont = index + 1; // ajusta o contador para o item clicado
-        clearInterval(timer); // limpa o timer atual
-        startTimer();         // reinicia o timer
-    });
+// cria os botões de indicador
+slides.forEach((_, i) => {
+  const btn = document.createElement("button");
+  if (i === 0) btn.classList.add("active");
+  btn.addEventListener("click", () => goToSlide(i));
+  indicatorsContainer.appendChild(btn);
 });
 
-// inicia o timer na primeira vez
-startTimer();
+const indicators = indicatorsContainer.querySelectorAll("button");
+
+function showSlide(index) {
+  if (index < 0) index = slides.length - 1;
+  if (index >= slides.length) index = 0;
+  currentIndex = index;
+  document.querySelector(".carousel").style.transform = `translateX(${-index * 100}%)`;
+  
+  indicators.forEach(btn => btn.classList.remove("active"));
+  indicators[index].classList.add("active");
+}
+
+function goToSlide(index) {
+  showSlide(index);
+  resetAutoPlay();
+}
+
+function nextSlide() {
+  showSlide(currentIndex + 1);
+}
+
+function prevSlide() {
+  showSlide(currentIndex - 1);
+}
+
+nextBtn.addEventListener("click", () => {
+  nextSlide();
+  resetAutoPlay();
+});
+
+prevBtn.addEventListener("click", () => {
+  prevSlide();
+  resetAutoPlay();
+});
+
+function startAutoPlay() {
+  autoPlay = setInterval(nextSlide, 4000); // troca a cada 4s
+}
+
+function resetAutoPlay() {
+  clearInterval(autoPlay);
+  startAutoPlay();
+}
+
+startAutoPlay();
 
