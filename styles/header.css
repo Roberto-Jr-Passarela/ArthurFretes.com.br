@@ -1,0 +1,114 @@
+@import url(config.css);
+
+/* ---------- HEADER FIXO ---------- */
+#menu {
+  position: fixed;       /* fixa no topo */
+  top: 0;                /* garante que fique colado no topo */
+  left: 0;
+  width: 100%;
+  padding: 12px 24px;    /* espaço interno */
+  background-color: hsla(0, 0%, 100%, 0.98);
+  display: flex;         /* flexbox geral */
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;         /* fica por cima do resto */
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.202); /* leve sombra */
+}
+
+/* Containers */
+#Alinhar-elementos-header-esquerdo,
+#Alinhar-elementos-header-direito {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Logo + texto */
+#logo-txt {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#logo {
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  background-image: linear-gradient(to top left, var(--cor-laranja), var(--cor-Azul-principal));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--cor-Branco-Original);
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+#txt {
+  display: flex;
+  flex-direction: column;
+}
+
+#Name-principal {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--cor3-Cinza-escuro);
+}
+
+#Name-complemento {
+  font-size: 14px;
+  color: var(--cor--Cinza-Brnaco);
+}
+
+/* Botões */
+#a-button-instagram-header, #a-button-telefone-header {
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.178);
+} 
+#a-button-instagram-header {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  color: var(--cor3-Cinza-escuro);
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+#a-button-telefone-header {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--cor-Branco-Original);
+  border-radius: 6px;
+  padding: 8px 16px;
+  border: none;
+  background-color: var(--cor-laranja);
+  cursor: pointer;
+}
+#span-01-header {
+  display: flex;
+}
+
+#span-02-header {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  #a-button-instagram-header {
+    display: none;
+  }
+  #span-01-header {
+    display: none;
+  }
+
+  #span-02-header {
+    display: flex;
+  }
+}

@@ -1,0 +1,119 @@
+@import url(../config.css);
+
+/* ---------- PG1 ---------- */
+#pg1 {
+    background-color: #4065CF;
+    min-height: calc(100vh + 87px);
+    padding: 96px 16px 50px 16px;
+    display: flex;
+    align-items: center;
+}
+#alinhamento-1400px-conteudo-pg1{
+    /*Alinhamento maior que 1400px*/
+    max-width: 1400px;
+    margin: auto;
+    
+    color: #FFFFFF;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+#lado-esquerdo-pg1 {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#h1-01-pg1 {
+    font-size: 36px;
+}
+
+#span-01-pg1 {
+    color: var(--cor-laranja);
+}
+
+#p-01-pg1 {
+    color: #FFFFFC;
+}
+
+/* Section com ícones */
+#section-01-pg1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Cada item da section */
+#div-01-pg1, #div-02-pg1, #div-03-pg1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.svgs-pg1 {
+    color: var(--cor-laranja);
+}
+
+/* Botões container */
+#buttons-pg1 {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.a-pg1 {
+    text-decoration: none;
+}
+
+/* Estilos comuns dos botões */
+#button-telefone-pg1,
+#button-servicos-pg1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.178);
+    cursor: pointer;
+}
+
+/* Diferenças entre os botões */
+#button-telefone-pg1 {
+    background-color: var(--cor-laranja);
+    color: white;
+    gap: 10px;
+}
+
+#button-servicos-pg1 {
+    background-color: var(--cor-Branco-Original); 
+    color: #4065CF;
+}
+
+/* Imagem */
+#img-01-pg1 {
+    max-width: 533px;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 30px;
+}
+
+@media (max-width: 440px) {
+    #button-telefone-pg1,
+    #button-servicos-pg1 {
+        width: 80vw;
+    }
+}

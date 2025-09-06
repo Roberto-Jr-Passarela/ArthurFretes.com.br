@@ -1,0 +1,106 @@
+@import url(../config.css);
+
+#pg2 {
+    background-color: #FFFFFF;
+}
+#alinhamento-1400px-conteudo-pg2 {
+    max-width: 1400px;
+    margin: auto;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    padding: 30px 16px;
+}
+
+#h2-pg2 {
+    font-size: 48px;
+    text-align: center;
+}
+
+#p-pg2 {
+    font-size: 20px;
+    max-width: 700px;
+    text-align: center;
+}
+
+#leyout-serviços, #leyout-serviços > div  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+/*
+#leyout-serviços > div {
+    max-width: 400px;
+    background-color: hsl(0, 0%, 99%);
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.167);
+}
+*/
+.modelo-leyout-servilços {
+    max-width: 400px;
+    background-color: hsl(0, 0%, 99%);
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.167);
+}
+
+/* 🔥 Agrupei flex-center repetidos */
+.alinha-svgs-pg2,
+.circolo-das-svgs-pg2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alinha-svgs-pg2 {
+    margin-bottom: 20px;
+}
+
+.circolo-das-svgs-pg2 {
+    padding: 10px;
+    background-color: rgb(204, 204, 204);
+    border-radius: 100px;
+    color: #4065CF;
+}
+
+.leyout-serviços-template-txt {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.leyout-serviços-template-txt > h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.ul-pg2 {
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+.ul-pg2 > li::marker {
+    color: var(--cor-laranja);
+}
+
+#div-templeat-folder-pg2 > .leyout-serviços-template-txt{
+    margin-bottom: 0px;
+}
+#div-templeat-folder-pg2 p{
+
+    text-align: justify;
+}
+
+@media (max-width: 480px) {
+    #h2-pg2 {
+        font-size: 38px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,50 @@
+@import url(config.css);
+
+footer {
+    color: #FFFFFFCC;
+}
+#alinhamento-1400px-conteudo-footer {
+    max-width: 1400px;
+    margin: auto;
+    padding: 5px 30px 20px 30px;
+}
+
+#alinhamento-1400px-conteudo-footer > address {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 🔥 Agrupando flex-center repetidos */
+.link-footer,
+#div-01-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-footer {
+    background-color: hsla(0, 0%, 100%, 0.101);
+    padding: 10px;
+    border-radius: 100px;
+    color: #FFFFFFCC;
+}
+.link-footer:hover {
+    color: #F97015;
+}
+
+#div-01-footer {
+    gap: 20px;
+}
+
+@media (max-width: 730px) {
+    #alinhamento-1400px-conteudo-footer  > address {
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    address > small {
+        margin-bottom: 20px;
+    }
+}

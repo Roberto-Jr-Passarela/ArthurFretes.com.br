@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/* ---------- CORES GERAIS DA HEADER ---------- */
+:root {
+  --cor-laranja: #F97015;
+  --cor--Cinza-Brnaco: #65758b;
+  --cor-Cinca-claro: #FFFFFF1A;
+  --cor3-Cinza-escuro: #282c34;
+  --cor4-Branco-fosco: #FFFFFFCC;
+  --cor5-Branco-acinzentado: #FFFFFF99;
+  --cor-Branco-Original: #FFFFFF;
+  --cor-Azul-principal: #4065CF;
+}
+/* ---------- RESET GLOBAL ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* ---------- CONFIGURAÇÕES PADRÃO ---------- */
+html {
+  font-size: 16px; /* facilita usar rem */
+}
+
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #282c34; /* fundo dark de base */
+  color: #282c34; /* cor de texto base */
+  line-height: 1.5;
+}
+a {
+  text-decoration: none;
+}
+
+
+ul {
+  list-style-position: inside; /* faz a bolinha ficar dentro do <li> */
+}
+
+#pg1, #pg2, #pg3, #pg4, #pg5 {
+  padding-bottom: 50px;
+}
+
+
+/*TENTATIVAR DE FAZER OS BUTONS*/
+.button-pg5, #button-watts-02-pg5, #button-telefone-pg1,
+#button-servicos-pg1,#button-pg3,#a-button-instagram-header, #a-button-telefone-header {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button-pg5:hover, #button-watts-02-pg5:hover, #button-telefone-pg1:hover,
+  #button-servicos-pg1:hover,#button-pg3:hover, #a-button-instagram-header:hover, #a-button-telefone-header:hover  {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Efeito mobile - touch/click */
+@media (hover: none) and (pointer: coarse) {
+  .button-pg5:active, #button-watts-02-pg5:active, #button-telefone-pg1:active,
+  #button-servicos-pg1:active,#button-pg3:active, #a-button-instagram-header:active, #a-button-telefone-header:active {
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+  }
+}

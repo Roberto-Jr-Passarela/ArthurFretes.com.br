@@ -1,0 +1,87 @@
+@import url(../config.css);
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(64, 2, 2);
+}
+
+.carousel {
+    width: 100%;
+    overflow-x: auto;
+    margin: 3em auto;
+    display: flex;
+    gap: 1em;
+    scroll-behavior: smooth;
+    anchor-name: --carousel;
+    scroll-snap-type: x mandatory;
+    scroll-marker-group: after;
+
+}
+
+.carousel::scroll-marker-group {
+    display: flex;
+    justify-content: center;
+    gap: .5em;
+}
+.carousel::scroll-marker {
+    content: '';
+    height: 1em;
+    width: 1em;
+    background-color: gray;
+    border-radius: 50%;
+
+}
+.card::scroll-marker:target-current {
+    background-color: green;
+
+}
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+.carousel::scroll-button(right),.carousel::scroll-button(left){
+    content: '→';
+    border: none;
+    background-color: red;
+    font-family: Consolas;
+    font-size: 3rem;
+    color: white;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    padding-bottom: .1em;
+    cursor: pointer;
+    position-anchor: --carousel;
+    position-area: right center;
+    translate: -50%;
+
+}
+
+.carousel::scroll-button(left) {
+    content: '←';
+    position-area: left center;
+    translate: 50%;
+}
+
+.carousel::scroll-button(right):disabled,.carousel::scroll-button(left):disabled {
+    opacity: 0.5;
+    cursor: auto;
+}
+
+.card {
+    scroll-snap-type: start;
+    flex: 0 0 20em;
+    aspect-ratio: 5 / 3;
+    height: 12em;
+    background-color: blue;
+    padding: 1em;
+    border-radius: .5em;
+    text-align: center;
+    align-content: center;
+}
+
+@media (max-width: 500px) {
+    .card {
+        flex: 0 0 100%;
+
+    }
+}

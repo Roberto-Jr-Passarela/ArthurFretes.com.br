@@ -1,0 +1,54 @@
+@import url(../config.css);
+
+#pg6 {
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 16px 30px 16px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    border-bottom: 1px solid #ffffffcc;
+}
+
+.div-templeat-pg6 {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    color: #ffffffcc;
+    padding: 10px;
+}
+
+#Name-principal-02 {
+    color: white;
+}
+
+/* 🔥 Agrupando flex-column com gap */
+#links-pg6,
+#links-pg6 > a {
+    display: flex;
+    gap: 15px;
+}
+
+#links-pg6 {
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+#links-pg6 > a {
+    align-items: center;
+    text-decoration: none;
+    color: #ffffffcc;
+}
+#links-pg6 > a:hover {
+    color: #F97015;
+}
+
+
+@media (max-width: 900px) {
+    #pg6 {
+        flex-direction: column;
+    }
+    .div-templeat-pg6 {
+        width: 80%;
+    }
+}
